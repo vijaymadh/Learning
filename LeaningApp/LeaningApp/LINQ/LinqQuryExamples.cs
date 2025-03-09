@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.XPath;
 
 namespace LeaningApp.LINQ
 {
@@ -58,13 +59,10 @@ namespace LeaningApp.LINQ
         /// </summary>
         internal void LinqGroupJoine()
         {
-            int[] numbers = { 1, 3, 8, 4, 6, 6, 8, 8, 6, 10 };
-            var resut = from number in numbers
-                        let squeare = number * number
-                        where squeare > 30
-                        select $"[Numer:{number}-Square:{squeare}]";
-
-            Console.WriteLine($"{JoinValues<string>(resut)}");
+            //var groupJoin = from c in categories
+            //                join p in products on c.Id equals p.CategoryId into productGroup
+            //                select new { c.CategoryName, Products = productGroup };
+           // Console.WriteLine($"{JoinValues<string>()}");
         }
 
 
